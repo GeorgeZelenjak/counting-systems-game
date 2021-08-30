@@ -17,7 +17,7 @@ screen = pygame.Surface((1080, 720))
 
 pygame.mixer.pre_init(44100, -16, 1, 512)
 pygame.mixer.init()
-pygame.mixer.music.load('Mozart.mp3')
+pygame.mixer.music.load('Mozart.ogg')
 pygame.mixer.music.play(-1)
 pygame.mixer.music.set_volume(0.3)
 
@@ -68,17 +68,17 @@ system = select_system.menu_loop()
 if system == 0:
     system = 'kahend'
     bg = pygame.image.load('marsh.png').convert()
-    music = 'Dvorak.mp3'
+    music = 'Dvorak.ogg'
     enemy_picts = ['marshmonster_left.png', 'marshmonster_right.png']
 elif system == 1:
     system = 'kaheksand'
     bg = pygame.image.load('ruins.png').convert()
-    music = 'Wagner.mp3'
+    music = 'Wagner.ogg'
     enemy_picts = ['troll_left.png', 'troll_right.png']
 else:
     system = 'kuueteistkümnend'
     bg = pygame.image.load('hell.png').convert()
-    music = 'Orff.mp3'
+    music = 'Orff.ogg'
     enemy_picts = ['devil_left.png', 'devil_right.png']
 
 
