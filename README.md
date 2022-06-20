@@ -3,6 +3,10 @@
 This is the game I made in *2018* as a project for one of the programming courses I took.
 While it is not a really exciting game, and pretty poorly written, it is my first project which I have spent quite a lot of time on.
 
+# Disclaimer
+
+At the moment, I plan on cleaning the repository and removing all non-python files. I also want to fix character's movement for my laptop (I have made the game on my desktop where everything was fine).
+
 # Dependencies
 * python3
 * pygame
