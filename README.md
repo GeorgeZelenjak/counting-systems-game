@@ -1,25 +1,42 @@
 # counting-systems-game
 
 This is the game I made in *2018* as a project for one of the programming courses I took.
+
 While it is not a really exciting game, and pretty poorly written, it is my first project which I have spent quite a lot of time on.
 
-# Disclaimer
+The purpose of the game is to practice converting numbers from one counting system into another (namely from base 10 into base 2, base 8 and base 16 and vice versa) in a fun way.
 
-At the moment, I plan on cleaning the repository and removing all non-python files. I also want to fix character's movement for my laptop (I have made the game on my desktop where everything was fine).
 
 # Dependencies
+
 * python3
 * pygame
 * pyganim
 
-# How to run
-* cd `counting-systems-game/Game\ 1080x810\ \(EST\)/CountingSystemsGame/` (or another game with another language and resolution) 
-* If on *Windows*, run `CountingSystemsGame.exe` in this directory.
-  Alternatively, you can run `python CountingSystemsGame.py`(worked for me on Windows 10)
-* For *Linux* (Arch Linux, namely) there is currently an issue with the input and some keys.
-  While you can still move around and enjoy the immortal music, you will not get the nice experience with the game.
-  I will try to fix it, *but cannot promise*.
-* I haven't tried the game on *MacOS*.
 
-# Licence
-* GNU GPLv3
+# How to run
+
+**NB! Currently, the game is only supported on Windows. If you want to add support for GNU/Linux or Mac, you are more than welcome to do so.**
+
+### To play a game
+
+* `cd Games/Game1080x810_est` (or another game with another language and resolution)
+* `python CountingSystemsGame.py`
+
+### To use a calculator
+
+* `cd Calcs`
+* `python calc_rus.py` or `python calc_est.py`
+
+
+## Contribution
+
+- Fork the repository through GitHub
+- Submit a pull request <br>
+The pull request will not be approved if:
+    - New classes/methods/functionalities are not correctly tested
+    - The additions to the code are not considered valid for this project
+    - The new code does not respect the license
+
+## License
+This software is released under the GNU GPLv3 only. See LICENSE file for more information.
