@@ -21,9 +21,9 @@ class Player(Sprite):
         self.speedx = 0
         self.speedy = 0
         self.move_speed = 7
-        self.jump_power = 6
+        self.jump_power = 7
         self.left = self.right = self.up = self.down = False
-        self.onGround = False
+        self.onGround = True
         self.picts = picts
         self.lives = lives
         self.gravity = gravity
@@ -67,22 +67,20 @@ class Player(Sprite):
                 self.speedy = -self.jump_power
                 self.image.fill((255, 255, 255))
                 self.boltAnimUp.blit(self.image, (0, 0))
+                self.onGround = False
             if self.character == 'EVE':
                 self.speedy = -self.move_speed
                 self.image.fill((255, 255, 255))
                 self.boltAnimUp.blit(self.image, (0, 0))
+                self.onGround = False
                 
         if self.down and self.character == 'EVE':
             self.speedy = self.move_speed
             self.image.fill((255, 255, 255))
             self.boltAnimUp.blit(self.image, (0, 0))
 
-        if not self.onGround:
-            if self.character == 'WALLE':
-                self.speedy += self.gravity
-            
-                       
-        self.onGround = False
+        if not self.onGround and self.character == 'WALLE':
+            self.speedy += self.gravity
 
         self.rect.x += self.speedx     
         if self.rect.x > world.w - self.rect.w:
