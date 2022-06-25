@@ -47,7 +47,6 @@ def level(lives1, lives2, picts1, picts2, music, bg, gravity, character, system,
     game_is_ended = False
 
     clock = pygame.time.Clock()
-    pygame.key.set_repeat(1, 1)
 
     game_on = True
 
@@ -65,7 +64,6 @@ def level(lives1, lives2, picts1, picts2, music, bg, gravity, character, system,
                     player.right = True
                 if e.key == pygame.K_UP or e.key == pygame.K_SPACE:
                     player.up = True
-                    player.onGround = False
                 if e.key == pygame.K_DOWN:
                     player.down = True
                 if e.key == pygame.K_RETURN and game_is_ended:

@@ -47,7 +47,6 @@ def level(lives1, lives2, picts1, picts2, music, bg, gravity, character, system,
     game_is_ended = False
 
     clock = pygame.time.Clock()
-    pygame.key.set_repeat(1, 10)
 
     game_on = True
 
@@ -55,7 +54,7 @@ def level(lives1, lives2, picts1, picts2, music, bg, gravity, character, system,
         for e in pygame.event.get():
             if e.type == pygame.QUIT:
                 sys.exit()
-            print(player.onGround)
+
             if e.type == pygame.KEYDOWN:
                 if e.key == pygame.K_ESCAPE:
                     sys.exit()
