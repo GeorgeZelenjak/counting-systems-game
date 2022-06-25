@@ -16,7 +16,7 @@ The purpose of the game is to practice converting numbers from one counting syst
 
 # How to run
 
-**NB! Currently, the game is only supported on Windows. If you want to add support for GNU/Linux or Mac, you are more than welcome to do so.**
+**NB! The game was created on Windows and for the best gaming experience I would recommend using it. The game works on GNU/Linux (I have tested it on Arch), however the fonts are a bit off as the game uses MicroSoft fonts**
 
 ### To play a game
 
