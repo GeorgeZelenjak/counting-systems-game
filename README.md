@@ -21,5 +21,13 @@ At the moment, I plan on cleaning the repository and removing all non-python fil
   I will try to fix it, *but cannot promise*.
 * I haven't tried the game on *MacOS*.
 
-# Licence
-* GNU GPLv3
+## How to contribute to it
+- Fork the repository through GitHub
+- Submit a pull request <br>
+The pull request will not be approved if:
+    - New classes/methods/functionalities are not correctly tested
+    - The additions to the code are not considered valid for this project
+    - The new code does not respect the license
+    
+## License
+This software is released under the GNU GPLv3 only. See LICENSE file for more information.
