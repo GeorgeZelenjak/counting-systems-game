@@ -200,14 +200,16 @@ class World:
 
             
 class InputBox:
-    def __init__(self, x, y, w, h, font, text = '' ):
+    def __init__(self, x, y, w, h, font):
         self.rect = pygame.Rect(x, y, w, h)
         self.inactive_colour = (255, 255, 0)
         self.active_colour = (255, 0, 0)
         self.font = font
         self.colour = self.inactive_colour
-        self.text = text
-        self.text_surf = self.font.render(text, True, self.colour)
+        self.prompt = 'BACKSPACE=kustuta 1 sümbol, DELETE=kustuta kõik sümbolid'
+        self.text = self.prompt
+        self.text_surf = self.font.render(self.text, True, self.colour)
+        self.text_pos = (self.rect.topleft[0] + 10, self.rect.topleft[1])
         self.answer = ''
         self.done = False
         self.active = False
@@ -217,11 +219,14 @@ class InputBox:
             sys.exit()
         if e.type == pygame.MOUSEBUTTONDOWN and e.button == 1:
             if self.rect.collidepoint(e.pos):
+                if not self.active:
+                    self.text = ''
                 self.active = True
                 self.colour = self.active_colour
             else:
                 self.active = False
                 self.colour = self.inactive_colour
+                self.text = self.prompt
  
         if e.type == pygame.KEYDOWN:
             if self.active:
@@ -234,14 +239,15 @@ class InputBox:
                         self.text = ''
                 elif e.key == pygame.K_BACKSPACE:
                     self.text = self.text[:-1]
+                elif e.key == pygame.K_DELETE:
+                    self.text = ''
                 else:
                     self.text += e.unicode.upper()
-            pygame.key.set_repeat(1, 1)
-            window.fill((0, 0, 0))
-            self.text_surf = self.font.render(self.text, False, self.colour)
+        window.fill((0, 0, 0))
+        self.text_surf = self.font.render(self.text, False, self.colour)
 
     def render(self, window):
-        window.blit(self.text_surf, self.rect.midtop)
+        window.blit(self.text_surf, self.text_pos)
         pygame.draw.rect(window, self.colour, self.rect, 2)
 
 class InfoString:
