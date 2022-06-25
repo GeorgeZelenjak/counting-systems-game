@@ -1,7 +1,7 @@
 ﻿#!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
-import pygame, sys
+import pygame, sys, time
 from Classes import *
 from Mathematics import *
 
@@ -47,7 +47,7 @@ def level(lives1, lives2, picts1, picts2, music, bg, gravity, character, system,
     game_is_ended = False
 
     clock = pygame.time.Clock()
-    pygame.key.set_repeat(1, 1)
+    pygame.key.set_repeat(1, 10)
 
     game_on = True
 
@@ -55,7 +55,7 @@ def level(lives1, lives2, picts1, picts2, music, bg, gravity, character, system,
         for e in pygame.event.get():
             if e.type == pygame.QUIT:
                 sys.exit()
-
+            print(player.onGround)
             if e.type == pygame.KEYDOWN:
                 if e.key == pygame.K_ESCAPE:
                     sys.exit()
@@ -65,13 +65,12 @@ def level(lives1, lives2, picts1, picts2, music, bg, gravity, character, system,
                     player.right = True
                 if e.key == pygame.K_UP or e.key == pygame.K_SPACE:
                     player.up = True
-                    player.onGround = False
                 if e.key == pygame.K_DOWN:
                     player.down = True
                 if e.key == pygame.K_RETURN and game_is_ended:
                     game_on = False
                     return winner
-
+            
             if e.type == pygame.KEYUP:
                 if e.key == pygame.K_LEFT:
                     player.left = False
