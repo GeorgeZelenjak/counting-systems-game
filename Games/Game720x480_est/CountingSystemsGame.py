@@ -17,7 +17,7 @@ screen = pygame.Surface(size)
 
 pygame.mixer.pre_init(44100, -16, 1, 512)
 pygame.mixer.init()
-pygame.mixer.music.load('Mozart.ogg')
+pygame.mixer.music.load('music/Mozart.ogg')
 pygame.mixer.music.play(-1)
 pygame.mixer.music.set_volume(0.3)
 
@@ -67,19 +67,19 @@ system = select_system.menu_loop()
 
 if system == 0:
     system = 'kahend'
-    bg = pygame.image.load('marsh.png').convert()
-    music = 'Dvorak.ogg'
-    enemy_picts = ['marshmonster_left.png', 'marshmonster_right.png']
+    bg = pygame.image.load('picts/marsh.png').convert()
+    music = 'music/Dvorak.ogg'
+    enemy_picts = ['picts/marshmonster_left.png', 'picts/marshmonster_right.png']
 elif system == 1:
     system = 'kaheksand'
-    bg = pygame.image.load('ruins.png').convert()
-    music = 'Wagner.ogg'
-    enemy_picts = ['troll_left.png', 'troll_right.png']
+    bg = pygame.image.load('picts/ruins.png').convert()
+    music = 'music/Wagner.ogg'
+    enemy_picts = ['picts/troll_left.png', 'picts/troll_right.png']
 else:
     system = 'kuueteistkümnend'
-    bg = pygame.image.load('hell.png').convert()
-    music = 'Orff.ogg'
-    enemy_picts = ['devil_left.png', 'devil_right.png']
+    bg = pygame.image.load('picts/hell.png').convert()
+    music = 'music/Orff.ogg'
+    enemy_picts = ['picts/devil_left.png', 'picts/devil_right.png']
 
 
 points_characters = [[size[0]/2 - 90, size[1]/2 - 70, u'WALLE', inactive_colour, active_colour, 0],
@@ -91,11 +91,11 @@ character = select_character.menu_loop()
 
 if character == 0:
     character = 'WALLE'
-    player_picts = ['walle.png', 'walle_left.png', 'walle_right.png', 'walle.png']
+    player_picts = ['picts/walle.png', 'picts/walle_left.png', 'picts/walle_right.png', 'picts/walle.png']
     gravity = 0.4
 else:
     character = 'EVE'
-    player_picts = ['eve.png', 'eve_left.png', 'eve_right.png', 'eve_up.png']
+    player_picts = ['picts/eve.png', 'picts/eve_left.png', 'picts/eve_right.png', 'picts/eve_up.png']
     gravity = 0
 
 
