@@ -92,7 +92,7 @@ character = select_character.menu_loop()
 if character == 0:
     character = 'Валли'
     player_picts = ['walle.png', 'walle_left.png', 'walle_right.png', 'walle.png']
-    gravity = 0.4
+    gravity = 0.6
 else:
     character = 'Ева'
     player_picts = ['eve.png', 'eve_left.png', 'eve_right.png', 'eve_up.png']
