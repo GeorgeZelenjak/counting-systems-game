@@ -7,7 +7,7 @@ import pygame, sys
 class Menu:
     def __init__(self, points, title, font_size):
         self.points = points
-        self.image = pygame.image.load('menu.png').convert()
+        self.image = pygame.image.load('picts/menu.png').convert()
         self.image.get_rect()
         self.title = title
         self.font_size = font_size
